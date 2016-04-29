@@ -83,18 +83,20 @@ public class Controller {
                     System.out.println(resultat.getString("NOM"));
                 }
 
-                PreparedStatement peticion3 = con.prepareStatement("SELECT DISTINCT POKEMON_ID, NOM, PES FROM POKEMONS WHERE NOM=?;");//System.out.println(poke1.getText());
+                PreparedStatement peticion3 = con.prepareStatement("SELECT DISTINCT POKEMON_ID, NOM, PES FROM POKEMONS WHERE NOM=?;");
                 peticion3.setString(1, poke2.getText());
                 resultat = peticion3.executeQuery();
                 while (resultat.next()) {
 
-                    PreparedStatement peticionatac = con.prepareStatement("SELECT DISTINCT VALOR FROM POKEMON_PODER WHERE POKEMON_ID=?;");//System.out.println(poke1.getText());
-                    int id = resultat.getInt("POKEMON_ID");
-                    System.out.println(id);
-                    peticionatac.setString(1, String.valueOf(id));
+
+                    //PreparedStatement peticionatac = con.prepareStatement("SELECT DISTINCT VALOR FROM POKEMON_PODER WHERE POKEMON_ID=?;");//System.out.println(poke1.getText());
+                    PreparedStatement peticionatac = con.prepareStatement("SELECT DISTINCT NOM, PODER_ID FROM PODERS");
+                    //int id = resultat.getInt("POKEMON_ID");
+                    //System.out.println(id);
+                    //peticionatac.setString(1, String.valueOf(id));
                     resultatatac = peticionatac.executeQuery();
                     while (resultatatac.next()) {
-                        System.out.println(resultatatac.getString("VALOR"));
+                        System.out.println(resultatatac.getString("NOM"));
                     }
 
 
