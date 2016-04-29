@@ -1,13 +1,8 @@
 package mario;
 
-import javafx.beans.Observable;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.paint.Paint;
-import javafx.scene.shape.Rectangle;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -69,6 +64,7 @@ public class Controller {
                     pokemon1.setNom(resultat.getString("NOM"));
                     pokemon1.setVida(200);
                     pokemon1.setPes(resultat.getInt("PES"));
+                    equipo1.add(pokemon1);
                     System.out.println(resultat.getString("NOM"));
                 }
 
@@ -80,6 +76,7 @@ public class Controller {
                     pokemon2.setNom(resultat.getString("nom"));
                     pokemon2.setVida(200);
                     pokemon2.setPes(resultat.getInt("PES"));
+                    equipo1.add(pokemon2);
                     System.out.println(resultat.getString("NOM"));
                 }
 
@@ -104,6 +101,7 @@ public class Controller {
                     pokemon3.setNom(resultat.getString("nom"));
                     pokemon3.setVida(200);
                     pokemon3.setPes(resultat.getInt("PES"));
+                    equipo2.add(pokemon3);
                     System.out.println(resultat.getString("NOM"));
                 }
 
@@ -115,6 +113,7 @@ public class Controller {
                     pokemon4.setNom(resultat.getString("nom"));
                     pokemon4.setVida(200);
                     pokemon4.setPes(resultat.getInt("PES"));
+                    equipo2.add(pokemon4);
                     System.out.println(resultat.getString("NOM"));
                 }
 
@@ -125,6 +124,5 @@ public class Controller {
             }finally {
                 con.close();
             }
-
         }
 }
