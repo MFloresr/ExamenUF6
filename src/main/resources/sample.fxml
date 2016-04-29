@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mario.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <Pane prefHeight="242.0" prefWidth="612.0">
+         <children>
+            <TextField fx:id="poke1" layoutX="82.0" layoutY="87.0" />
+            <TextField fx:id="poke12" layoutX="82.0" layoutY="177.0" />
+            <TextField fx:id="poke2" layoutX="387.0" layoutY="87.0" />
+            <TextField fx:id="poke22" layoutX="387.0" layoutY="177.0" />
+            <Label layoutX="82.0" layoutY="58.0" text="Pokemon 1" />
+            <Label layoutX="82.0" layoutY="145.0" text="Pokemon 2" />
+            <Label layoutX="387.0" layoutY="58.0" text="Pokemon 1" />
+            <Label layoutX="387.0" layoutY="145.0" text="Pokemon 2" />
+            <Label layoutX="285.0" layoutY="96.0" text="VS">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="194.0" layoutY="26.0" text="LLUITA DE POKEMONS">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnlluitar" layoutX="280.0" layoutY="165.0" mnemonicParsing="false" onMouseClicked="#lluitarPokemons" text="Lluitar" />
+         </children></Pane>
+    </children>
+</GridPane>
